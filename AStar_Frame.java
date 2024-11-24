@@ -6,7 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//UI类
+//一般用Swing包中的JFrame类(JavaBean类)来创建窗口，然后在窗口中添加各种组件，比如按钮、文本框、标签等。
+//JFrame 界面，窗体
+//子类呢?也表示界面，窗体
+//规定:AStar_Frame这个界面表示的就是五子棋的主界面
+//以后跟五子棋相关的所有逻辑都写在这个类中
 public class AStar_Frame extends JFrame {// 五子棋界面设置
     private static final long serialVersionUID = -7844061449912554572L;
     JRadioButton manualBtn = new JRadioButton("2P");//两人对战模式按钮
@@ -34,6 +38,7 @@ public class AStar_Frame extends JFrame {// 五子棋界面设置
     public AStar_Frame() {
         super("五子棋博弈系统");
         add(panel, BorderLayout.EAST);
+        setAlwaysOnTop(true);//设置界面置顶
 
         ButtonGroup grp_mode = new ButtonGroup();
         grp_mode.add(manualBtn);
